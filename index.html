@@ -7,21 +7,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/favicon.png" sizes="16x16">
 </head>
 
 <style>
+    body{
+        font-family: 'Titillium Web', sans-serif;
+        background-color: rgb(209, 168, 107);
+    }
 
 
+    /* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
 
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
 
 </style>
 
 <body>
     <h1>Thiago Landim's Stuff</h1>
+    <img scr="/images/giphy2.gif" alt="#">
 
-    <p> I'm a PhD candidate at Sorbonne Université (or Université Pierre et Marie Curie or Paris VI or Jussieu). I study categorifications of the Langlands correspondence under <a href = "https://perso.imj-prg.fr/annemarie-aubert/"> Anne-Marie Aubert</a>. I'm funded by FSMP's <a href="https://sciencesmaths-paris.fr/nos-programmes/mathinparis2020">MathInParis2020 Program</a> (which is cofunded by the Marie Sklodowska‑Curie Actions).
+    <div class="navbar">
+        <a href="#">Math Stuff</a>
+        <a href="#">Fun Stuff</a>
+        <a href="#">More Photos</a>
+        <a href="#" class="right">CV</a>
+      </div>
+
+    <p> 
+        I'm a PhD student at Sorbonne Université (or Université Pierre et Marie Curie or Paris VI or Jussieu). I study categorifications of the Langlands correspondence under <a href = "https://perso.imj-prg.fr/annemarie-aubert/"> Anne-Marie Aubert</a>. I'm funded by FSMP's <a href="https://sciencesmaths-paris.fr/nos-programmes/mathinparis2020">MathInParis2020 Program</a> (which is cofunded by the Marie Sklodowska-Curie Actions).
     </p>
 
+    <p>
+        My CV is <a href="#">here</a>.
+    </p>
 </body>
 
 </html>
