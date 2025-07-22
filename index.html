@@ -1,75 +1,37 @@
-<html lang="en">
-<head>
-    <title>Thiago Landim</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="This is my personal page. Here you can find who I am, what I like and some other stuff.">
-    <meta name="author" content="Thiago Landim">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-</head>
+---
+layout: default
+title: Home
+---
 
-<style>
-    body{
-        font-family: 'Titillium Web', sans-serif;
-        background-color: rgb(209, 168, 107);
-    }
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    /* Style the top navigation bar */
-.navbar {
-  overflow: hidden; /* Hide overflow */
-  background-color: #333; /* Dark background color */
-}
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left; /* Make sure that the links stay side-by-side */
-  display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: white; /* White text color */
-  text-align: center; /* Center the text */
-  padding: 14px 20px; /* Add some padding */
-  text-decoration: none; /* Remove underline */
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right; /* Float a link to the right */
-}
-
-/* Change color on hover/mouse-over */
-.navbar a:hover {
-  background-color: #ddd; /* Grey background color */
-  color: black; /* Black text color */
-}
-
-</style>
-
-<body>
-    <h1>Thiago Landim's Stuff</h1>
-
-    <div class="navbar">
-        <a href="index.html">About Myself</a>
-        <a href="math.html">Math Stuff</a>
-        <a href="fun.html">Fun Stuff</a>
-        <a href="photos.html">Some Photos</a>
-        <a href="links.html" class="right">Cool Links</a>
-    </div>
-
-    <p> 
-        I'm a PhD student at Sorbonne Université (or Université Pierre et Marie Curie or Paris VI or Jussieu). I study categorifications of the Langlands correspondence under <a href = "https://perso.imj-prg.fr/annemarie-aubert/"> Anne-Marie Aubert</a>. I'm funded by FSMP's <a href="https://sciencesmaths-paris.fr/nos-programmes/mathinparis2020">MathInParis2020 Program</a> (which is cofunded by the Marie Sklodowska-Curie Actions). I also help with the organization of Brazilian Mathematics Olympiad for University Students.
-    </p>
-
-    <p>
-      
-    </p>
-
-    <p>
-        My CV is <a href="Curriculum_Vitae.pdf">here</a>.
-    </p>
-
-    <img src="./images/giphy2.gif" alt="" />
-</body>
-
-</html>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
