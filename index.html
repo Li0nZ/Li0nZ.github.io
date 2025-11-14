@@ -11,45 +11,26 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="index.css">
 </head>
-
-<style>
-    body{
-        font-family: 'Palatino';
-        background-color: rgb(209, 168, 107);
-    }
-
-
-    /* Style the top navigation bar */
-.navbar {
-  overflow: hidden; /* Hide overflow */
-  background-color: #333; /* Dark background color */
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left; /* Make sure that the links stay side-by-side */
-  display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: white; /* White text color */
-  text-align: center; /* Center the text */
-  padding: 14px 20px; /* Add some padding */
-  text-decoration: none; /* Remove underline */
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right; /* Float a link to the right */
-}
-
-/* Change color on hover/mouse-over */
-.navbar a:hover {
-  background-color: #ddd; /* Grey background color */
-  color: black; /* Black text color */
-}
-</style>
 
 <body>
     <h1>Thiago Landim</h1>
+
+    <button class="theme-switcher js-theme-switcher" type="button" aria-pressed="false">
+    <span class="visually-hidden">Changer le mode de couleurs</span>
+    <span class="theme-icon">
+      <svg class="theme-icon-light" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="transparent" stroke="currentColor" stroke-linecap="round">
+        <path fill="currentColor" d="M18 12a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M12 1.25c.41 0 .75.34.75.75v1a.75.75 0 0 1-1.5 0V2c0-.41.34-.75.75-.75ZM4.4 4.4c.3-.3.77-.3 1.06 0l.4.4a.75.75 0 0 1-1.07 1.05l-.4-.4a.75.75 0 0 1 0-1.05Zm15.2 0c.3.3.3.77 0 1.06l-.4.4a.75.75 0 0 1-1.05-1.07l.4-.4a.76.76 0 0 1 1.05 0ZM1.25 12c0-.41.34-.75.75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75Zm19 0c0-.41.34-.75.75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75Zm-2.1 6.15c.3-.3.77-.3 1.06 0l.4.4a.75.75 0 1 1-1.07 1.05l-.4-.4a.75.75 0 0 1 0-1.05Zm-12.3 0c.3.3.3.77 0 1.06l-.4.4a.75.75 0 1 1-1.05-1.07l.4-.4a.74.74 0 0 1 1.05 0Zm6.15 2.1c.41 0 .75.34.75.75v1a.75.75 0 0 1-1.5 0v-1c0-.41.34-.75.75-.75Z" clip-rule="evenodd"/>
+      </svg>
+      <svg class="theme-icon-dark" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="transparent" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </span>
+  </button>
+
+    </div>
 
     <div class="navbar"> 
         <a href="index.html">About Myself</a>
@@ -60,7 +41,7 @@
         <a href="links.html" class="right">Cool Links</a>
     </div>
 
-    <p> 
+    <p style="font-size: 14pt;" style="line-height: 10pt;"> 
         I defended my PhD at Sorbonne Université (or Université Pierre et Marie Curie or Paris VI or Jussieu). I studied motives and the Springer correspondence under <a href = "https://perso.imj-prg.fr/annemarie-aubert/"> Anne-Marie Aubert</a>. I was funded by FSMP's <a href="https://sciencesmaths-paris.fr/nos-programmes/mathinparis2020">MathInParis2020 Program</a> (which is cofunded by the Marie Sklodowska-Curie Actions). I also help with the organization of Brazilian Mathematics Olympiad for University Students and the PhD seminar at the IMJ-PRG.
     </p>
 

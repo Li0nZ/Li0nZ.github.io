@@ -1,0 +1,171 @@
+/* Theme switcher */
+.theme-switcher {
+  --theme-switcher-width: 42px;
+  --theme-switcher-radius: 40px;
+  --theme-switcher-padding: 4px;
+  --theme-switcher-border-color: light-dark(#111827, #d4d4d4);
+  --theme-switcher-border-size: 1px;
+  --theme-switcher-background: light-dark(#d1d5db, #6b7280);
+  --theme-switcher-icon-size: 16px;
+  --theme-switcher-icon-color: light-dark(#111827, #ffffff);
+  --theme-switcher-icon-background: light-dark(#ffffff, #1e293b);
+  --theme-switcher-transition: 0.25s;
+
+  display: inline-flex;
+  justify-content: start;
+  width: var(--theme-switcher-width);
+  padding: var(--theme-switcher-padding);
+  border: 0;
+  border-radius: var(--theme-switcher-radius);
+  box-shadow: 0 0 0 var(--theme-switcher-border-size)
+    var(--theme-switcher-border-color) inset;
+  background-color: var(--theme-switcher-background);
+  line-height: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    flex: 0 0 0;
+    transition: var(--theme-switcher-transition) flex-grow;
+    will-change: flex-grow;
+  }
+
+  & * {
+    pointer-events: none;
+  }
+
+  & > .theme-icon {
+    padding: 2px;
+    border-radius: 50%;
+    color: var(--theme-switcher-icon-color);
+    background-color: var(--theme-switcher-icon-background);
+    rotate: 0deg;
+    transition: var(--theme-switcher-transition) rotate;
+  }
+
+  & [class^="theme-icon-"] {
+    width: var(--theme-switcher-icon-size);
+    height: var(--theme-switcher-icon-size);
+  }
+
+  &[aria-pressed="false"] {
+    & .theme-icon-dark {
+      display: none;
+    }
+  }
+
+  &[aria-pressed="true"] {
+    & .theme-icon-light {
+      display: none;
+    }
+
+    & > .theme-icon {
+      rotate: 240deg;
+    }
+
+    &::before {
+      flex: 1 0 0;
+    }
+  }
+}
+
+:root {
+  color-scheme: light dark;
+  --colors-white: #EEEEEE;
+  --colors-black: #333333;
+  --colors-primary: light-dark(var(--colors-black), var(--colors-white));
+  --colors-secondary: light-dark(var(--colors-white), var(--colors-black));
+  --font-size-base: 1.2rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --border-radius-full: 9999px;
+}
+
+&[data-theme="light"] {
+  color-scheme: light;
+}
+
+&[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+html {
+  color: var(--colors-primary);
+  background-color: var(--colors-secondary);
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  display: grid;
+  min-height: 100dvh;
+  place-content: start center;
+  justify-items: center;
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+code {
+  font-size: inherit;
+}
+
+main {
+  padding: 4rem;
+  margin-inline: auto;
+  max-width: 800px;
+}
+
+
+@media (width >= 40rem) {
+  main {
+    max-width: 1000px;
+  }
+}
+
+
+    /* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: light dark; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
