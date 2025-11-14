@@ -82,7 +82,7 @@
 
 body {
   /* color-scheme: light dark; */
-  --colors-white: #F9EAD6;
+  --colors-white: #EEEEEE;
   --colors-black: #333333;
   --colors-primary: var(--colors-black);
   --colors-secondary: var(--colors-white);
@@ -116,8 +116,8 @@ body {
   display: grid;
   min-height: 100dvh;
   place-content: start center;
-  /*justify-items: center;*/
-  margin: 10dvh;
+  justify-items: center;
+  margin: 0;
   font-size: var(--font-size-base);
   font-family: 'Palatino';
 }
@@ -165,7 +165,7 @@ main {
 .navbar a {
   float: left; /* Make sure that the links stay side-by-side */
   display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: color; /* White text color */
+  color: rgb(138, 119, 62); /* White text color */
   text-align: center; /* Center the text */
   padding: 14px 20px; /* Add some padding */
   text-decoration: none; /* Remove underline */
@@ -186,51 +186,4 @@ main {
 .dark-mode {
     background-color: #222;
     color: #eee;
-}
-
-.main-topic {
-    border: 2px solid green;
-    width: 1541px;
-    margin: 0 auto;
-    clear: both;
-}
-
-.left-text{
-    vertical-align:middle;
-}
-
-.right-picture > img{
-    display: block;
-}
-
-.clear{
-    clear: both;
-}
-
-.container {
-  padding: 20px 40px 40px;
-  max-width: 800px;
-  &__image {
-    display: inline-block;
-    vertical-align: top;
-    width: 46%;
-    margin: 20px;
-    float: right;
-  }
-  &__text {
-    display: inline-block;
-    width: 46%;
-    max-width: 300px;
-    margin: 20px;
-    float: left;
-  }
-}
-
-hr {
-  border: none;
-  border-top: 3px double #333333;
-  color: #333333;
-  overflow: visible;
-  text-align: center;
-  height: 5px;
 }

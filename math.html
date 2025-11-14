@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Math Stuff</title>
+    <title>Math</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is my personal page. Here you can find who I am, what I like and some other stuff.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,51 +11,69 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 
-<body>
+<body onload="initTheme()">
+    <button class="theme-switcher js-theme-switcher" aria-pressed="false" onclick="switchTheme()" align="right">
+    <span class="visually-hidden">Changer le mode de couleurs</span>
+    <span class="theme-icon">
+      <svg class="theme-icon-light" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="transparent" stroke="currentColor" stroke-linecap="round">
+        <path fill="currentColor" d="M18 12a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M12 1.25c.41 0 .75.34.75.75v1a.75.75 0 0 1-1.5 0V2c0-.41.34-.75.75-.75ZM4.4 4.4c.3-.3.77-.3 1.06 0l.4.4a.75.75 0 0 1-1.07 1.05l-.4-.4a.75.75 0 0 1 0-1.05Zm15.2 0c.3.3.3.77 0 1.06l-.4.4a.75.75 0 0 1-1.05-1.07l.4-.4a.76.76 0 0 1 1.05 0ZM1.25 12c0-.41.34-.75.75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75Zm19 0c0-.41.34-.75.75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75Zm-2.1 6.15c.3-.3.77-.3 1.06 0l.4.4a.75.75 0 1 1-1.07 1.05l-.4-.4a.75.75 0 0 1 0-1.05Zm-12.3 0c.3.3.3.77 0 1.06l-.4.4a.75.75 0 1 1-1.05-1.07l.4-.4a.74.74 0 0 1 1.05 0Zm6.15 2.1c.41 0 .75.34.75.75v1a.75.75 0 0 1-1.5 0v-1c0-.41.34-.75.75-.75Z" clip-rule="evenodd"/>
+      </svg>
+      <svg class="theme-icon-dark" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="transparent" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </span>
+  </button>
+
     <h1>Thiago Landim</h1>
 
-    <div class="navbar">
+    <div class="navbar"> 
         <a href="index.html">About Myself</a>
         <a href="math.html">Math Stuff</a>
-        <a href="fun.html">Fun Stuff</a>
-        <a href="photos.html">Some Photos</a>
-        <a href="links.html" class="right">Cool Links</a>
     </div>
 
-    <h2>Math Stuff</h2>
+  <h3>Research</h3>
+  <ol>
+    <li><em>An Integral Springer Correspondence</em>, <a href="https://arxiv.org/abs/2509.18280">ArXiv</a></li>
+    <li><em>Weights for K-motives</em>, <a href="https://arxiv.org/abs/2509.18281">ArXiv</a></li>
+    <li>My thesis <em>The Springer correspondence and motives</em>, <a href="https://theses.fr/s385526">link</a></li>
+    <li>My M2 Mémoire <em>The Geometric Satake Equivalence</em>, <a href="./documents/M2_Memoire.pdf">pdf</a> </li>
+  </ol>
 
-    <p>My M2 Mémoire under Arthur-César Le Bras: <a href="./documents/M2_Memoire.pdf">The Geometric Satake Equivalence</a></p>
-    
-    <p><a href="./documents/Satake_Slides.pdf">Slides</a> of my presentation for the course <em>Des aspects relatifs du programme de Langlands</em> from my M2.</p>
+  <hr/>
 
-    <p><a href="./documents/SDH.pdf">Slides</a> of my presentation for the course <em>Systèmes Dynamiques Holomorphes</em> from my M2 (in French).</p>
+  <h3>Slides</h3>
 
-    <p>Some notes on <a href="./documents/Epimorfismos_de_An_is.pdf">epimorphism of rings</a> (in Portuguese).</p>
+  <ul>
+    <li> My presentation for the course <em>Des aspects relatifs du programme de Langlands</em> from my M2, <a href="./documents/Satake_Slides.pdf">pdf</a></li>
+    <li> My presentation for the course <em>Systèmes Dynamiques Holomorphes</em> from my M2 (in French), <a href="./documents/SDH.pdf">pdf</a></li>
+    <li>Slides on Gelfand duality, <a href="./documents/Slides___Gelfand.pdf">pdf</a></li>
+  </ul>
 
-    <p>Some notes on <a href="./documents/_lgebras_de_Banach_e_C___lgebras.pdf">Gelfand duality</a> and some <a href="./documents/Slides___Gelfand.pdf">slides</a> (in Portuguese).</p>
+  <hr/>
 
-    <p>I wrote <a href="./documents/A__o_de_Grupos.pdf">this</a> incomplete but cool collection of group actions coming from different areas of Mathematics (in Portuguese).</p>
+  <h3>Notes</h3>
 
-    <p>I also wrote with two friends the solutions for some exercises from Aluffi's <em>Algebra: Chapter 0</em> and from <em>Papa Rudin</em>. You can find both of the documents and much more interesting stuff in <a href="https://perso.pages.math.cnrs.fr/users/gabriel.ribeiro/page1.html">Gabriel Ribeiro's website</a>.</p>
+  <ul>
+    <li> Some notes on epimorphism of rings (in Portuguese), <a href="./documents/Epimorfismos_de_An_is.pdf">pdf</a></li>
+    <li> Some notes on Gelfand duality (in Portuguese), <a href="./documents/_lgebras_de_Banach_e_C___lgebras.pdf">pdf</a></li>
+  </ul>
 
-    <h2>Olympic Stuff (everything in Portuguese)</h2>
+  <hr/>
 
-    <p>I gave classes for the Prolímpico program in 2020 and 2022:
+  <h3> Math olympiad (everything in Portuguese)</h3>
 
     <ul>
-      <li>In 2020, I gave a class on the probabilistic method: <a href="./documents/Expectativa.pdf">Here</a> are the lecture notes whose problems have solutions <a href="./documents/Solu__es.pdf">here</a>, and <a href="https://youtu.be/FrkJB5dGiRA?list=PLo4jXE-LdDTQ_he7G73UWUVx2YnMHd_dP">here</a> is the recording.</li>
-      <li>In 2022, I gave a class on inequalities: <a href="https://www.youtube.com/watch?v=xOpJupe0W6M">Here</a> is the recording and <a href="./documents/Problemas_Prol_mpico.pdf">here</a> is the problem set.</li> 
+      <li> Notes and solutions for my 2020 class on the probabilistic method for the Prolímpico program, <a href="./documents/Expectativa.pdf">pdf</a> and <a href="./documents/Solu__es.pdf">pdf</a> (you can find a recording of the class <a href="https://youtu.be/FrkJB5dGiRA?list=PLo4jXE-LdDTQ_he7G73UWUVx2YnMHd_dP">here</a>)</li>
+      <li> Problems for my 2022 class on inequalities for the Prolímpico program, <a href="./documents/Problemas_Prol_mpico.pdf">pdf</a> (you can find a recording of the class  <a href="https://www.youtube.com/watch?v=xOpJupe0W6M">here</a>)</li> 
+      <li>Notes for my 2020 class at the olympic week on Roth's theorem, <a href="./documents/Teorema_de_Roth.pdf">pdf</a> </li>
+      <li> A problem set for class I gave aimed at the Cono Sur Mathematics Olympiad, <a href="./documents/Jogos_e_Tabuleiros.pdf">pdf</a></li>
+      <li> A (small) problem set for IMO training, <a href="./documents/M_todo__Probabil_stico.pdf">pdf</a></li>
     </ul>
-
-    <p>In 2020, I also gave a lecture at the olympic week on <a href="./documents/Teorema_de_Roth.pdf">Roth's Theorem</a>.</p>
     
     <!--Integration tricks and other things at UFPE-->
-
-    <p><a href="./documents/Jogos_e_Tabuleiros.pdf">Here</a> is a problem set for class I gave aimed at the Cono Sur Mathematics Olympiad.</p>
-
-    <p><a href="./documents/M_todo__Probabil_stico.pdf">Here</a> is a (small) problem set for IMO training.</p>
-
     <!-- <p><a href="./documents/Comp_ndio_CIIM__5297135ydbfts_.pdf">Here</a>> is a compedium of problems and solutions of most of the CIIM problems (done by three students at the Engineering Military Institute, not by myself!)</p> -->
 </body>
