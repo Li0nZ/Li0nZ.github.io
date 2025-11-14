@@ -20,7 +20,7 @@
   }
 
   // Gestion du clic sur le bouton
-  themeSwitcher.button.addEventListener('click', function() {
+  themeSwitcher.button.addEventListener('click', function(){
     themeSwitcher.currentTheme = document.documentElement.getAttribute('data-theme') === "dark" ? "light" : "dark";
     setTheme(themeSwitcher.currentTheme);
   });
