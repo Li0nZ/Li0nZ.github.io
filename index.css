@@ -3,12 +3,12 @@
   --theme-switcher-width: 42px;
   --theme-switcher-radius: 40px;
   --theme-switcher-padding: 4px;
-  --theme-switcher-border-color: light-dark(#111827, #d4d4d4);
+  --theme-switcher-border-color: #111827;
   --theme-switcher-border-size: 1px;
-  --theme-switcher-background: light-dark(#d1d5db, #6b7280);
+  --theme-switcher-background: #d1d5db;
   --theme-switcher-icon-size: 16px;
-  --theme-switcher-icon-color: light-dark(#111827, #ffffff);
-  --theme-switcher-icon-background: light-dark(#ffffff, #1e293b);
+  --theme-switcher-icon-color: #111827;
+  --theme-switcher-icon-background: #ffffff;
   --theme-switcher-transition: 0.25s;
 
   display: inline-flex;
@@ -47,14 +47,26 @@
     width: var(--theme-switcher-icon-size);
     height: var(--theme-switcher-icon-size);
   }
+}
 
-  &[aria-pressed="false"] {
+.theme-switcher.dark-mode {
+    --theme-switcher-border-color: #d4d4d4;
+    --theme-switcher-border-size: 1px;
+    --theme-switcher-background: #6b7280;
+    --theme-switcher-icon-size: 16px;
+    --theme-switcher-icon-color: #ffffff;
+    --theme-switcher-icon-background: #1e293b;
+}
+
+
+.theme-switcher .theme-icon-dark {
+    display: none;
+}
+
+.theme-switcher.dark-mode {
     & .theme-icon-dark {
-      display: none;
+        display: block;
     }
-  }
-
-  &[aria-pressed="true"] {
     & .theme-icon-light {
       display: none;
     }
@@ -66,27 +78,26 @@
     &::before {
       flex: 1 0 0;
     }
-  }
 }
 
-:root {
-  color-scheme: light dark;
+body {
+  /* color-scheme: light dark; */
   --colors-white: #EEEEEE;
   --colors-black: #333333;
-  --colors-primary: light-dark(var(--colors-black), var(--colors-white));
-  --colors-secondary: light-dark(var(--colors-white), var(--colors-black));
+  --colors-primary: var(--colors-black);
+  --colors-secondary: var(--colors-white);
   --font-size-base: 1.2rem;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --border-radius-full: 9999px;
+
+  background: var(--colors-white);
+  color: var(--colors-black);
 }
 
-&[data-theme="light"] {
-  color-scheme: light;
-}
-
-&[data-theme="dark"] {
-  color-scheme: dark;
+body.dark-mode {
+  background: var(--colors-black);
+  color: var(--colors-white);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -154,7 +165,7 @@ main {
 .navbar a {
   float: left; /* Make sure that the links stay side-by-side */
   display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: white; /* White text color */
+  color: rgb(138, 119, 62); /* White text color */
   text-align: center; /* Center the text */
   padding: 14px 20px; /* Add some padding */
   text-decoration: none; /* Remove underline */
@@ -169,4 +180,10 @@ main {
 .navbar a:hover {
   background-color: #ddd; /* Grey background color */
   color: black; /* Black text color */
+}
+
+/* This class will be added or removed by JavaScript */
+.dark-mode {
+    background-color: #222;
+    color: #eee;
 }

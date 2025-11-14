@@ -13,13 +13,14 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
     <h1>Thiago Landim</h1>
 
-
-    <button class="theme-switcher js-theme-switcher" aria-pressed="false">
+  <main>
+    <button class="theme-switcher js-theme-switcher" aria-pressed="false" onclick="switchTheme()">
     <span class="visually-hidden">Changer le mode de couleurs</span>
     <span class="theme-icon">
       <svg class="theme-icon-light" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="transparent" stroke="currentColor" stroke-linecap="round">
@@ -31,6 +32,7 @@
       </svg>
     </span>
   </button>
+  </main>
 
     <div class="navbar"> 
         <a href="index.html">About Myself</a>
@@ -47,6 +49,8 @@
     <p>
         My CV is <a href="Curriculum_Vitae.pdf">here</a>.
     </p>
+
+    <p>This is a test. </p>
 </body>
 
 </html>

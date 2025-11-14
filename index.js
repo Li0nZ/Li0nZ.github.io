@@ -1,4 +1,5 @@
 // Encapsulation du code dans une fonction immédiatement invoquée
+/*
 (function() {
   // Déclaration des variables
   const themeSwitcher = {
@@ -42,3 +43,32 @@
   // Initialisation
   initTheme();
 })();
+
+//Dark mode button
+const toggleButton = document.getElementById('theme-toggle');
+
+toggleButton.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+*/
+
+let bodyClassList = null;
+let buttonClassList = null;
+let darkModeOn = false;
+
+function switchTheme() {
+    if (bodyClassList === null) {
+        bodyClassList   = document.querySelector("body").classList;
+        buttonClassList = document.querySelector(".theme-switcher").classList;
+    }
+
+    if (darkModeOn) {
+        bodyClassList.remove("dark-mode");
+        buttonClassList.remove("dark-mode");
+    } else {
+        bodyClassList.add("dark-mode");
+        buttonClassList.add("dark-mode");
+    }
+
+    darkModeOn = !darkModeOn;
+}
