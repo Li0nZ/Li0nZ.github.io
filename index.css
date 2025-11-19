@@ -158,22 +158,14 @@ main {
 }
 
 
-@media (width >= 40rem) {
-  main {
-    max-width: 1000px;
-  }
-}
-
-
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden; /* Hide overflow */
   background-color: var(--colors-bg); /* Dark background color */
-  padding: .5rem 1rem;
+  padding: .5rem clamp(10px, 10%, 1000px); /* Some padding */
   border-bottom: 1px solid gray;
   box-shadow: 0px 0px 2px gray;
   opacity: 0.95;
-  width: clamp(300px, 80%, 900);
   text-align: right;
   align-items: center;
 }
@@ -204,8 +196,7 @@ main {
 
 /* Style the navigation bar links */
 .navbar a {
-  
-  display: inline-block;/* Change the display to block, for responsive reasons (see below) */
+  display: inline-block;/* Change the display to block, for responsive reasons */
   text-align: center; /* Center the text */
   padding: 1px 10px; /* Add some padding */
   text-decoration: none; /* Remove underline */
@@ -214,6 +205,10 @@ main {
 /* Right-aligned link */
 .navbar a.right {
   float: right; /* Float a link to the right */
+}
+
+.navbar a.left {
+  float: left; /* Float a link to the right */
 }
 
 .navbar a:not(.nohover):hover {  
@@ -277,4 +272,51 @@ img#shadow {
   justify-content: space-between;
   align-items: center;
   width: 300px;
+}
+
+progress {
+  width: 100%;
+  left: 0;
+  top: 56px;
+  z-index: 10;
+  height: 1px;
+  appearance: none;
+  border: 0;
+  background-color: var(--colors-bg);
+  color: var(--colors-select);
+}
+
+.progress-container {
+  width: 100%;
+  background-color: var(--colors-secondary);
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 5px;
+  display: block;
+}
+
+.progress-bar {
+  width: 0%;
+  background-color: var(--colors-select);
+  height: 20px;
+  display: block;
+  height: inherit;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+}
+
+footer {
+  width: 100%;
+  height: 3px;
+  position: fixed;
+  top: 47px;
+  left: 0;
+  background: var(--colors-bg);
+}
+
+#footer__progress_bar {
+	height: 3px;
+	background: var(--colors-select);
+	width: 0%;
+  text-align: center
 }

@@ -17,8 +17,23 @@
 
 <body onload="initTheme()" style="padding-top: 57px;">
   <header>
-    <div class="navbar fixed-top" style="text-align:center;"> 
-        <a href="index.html">About</a>
+        <footer>
+    <div id="footer__progress_bar"></div>
+    </footer>
+
+    <script>
+window.onscroll = function() { ScrollIndicator() };
+
+function ScrollIndicator() {
+	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;
+	document.getElementById( 'footer__progress_bar' ).style.width = scrolled + "%";
+}
+</script>
+    <div class="navbar fixed-top"> 
+        <a class="left nohover" style="font-weight: bold;">Thiago Landim</a>
+        <a href="/">About</a>
         <a href="math.html" style="color:var(--colors-select);"><b>Math</b></a>
         <!--<a class="right nohover">
           <button class="theme-switcher js-theme-switcher" aria-pressed="false" onclick="switchTheme()">
@@ -52,7 +67,6 @@
   <hr>
 
   <h3>Slides</h3>
-
   <ul>
     <li> My presentation for the course <em>Des aspects relatifs du programme de Langlands</em> from my M2, <a href="./documents/Satake_Slides.pdf" target="_blank">pdf</a></li>
     <li> My presentation for the course <em>Systèmes Dynamiques Holomorphes</em> from my M2 (in French), <a href="./documents/SDH.pdf" target="_blank">pdf</a></li>

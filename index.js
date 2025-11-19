@@ -74,3 +74,13 @@ function switchTheme() {
 
     darkModeOn = !darkModeOn;
 }
+
+const progressBar = document.getElementById('footer__progress_bar')
+const totalValue = document.body.clientHeight - window.innerHeight
+
+document.body.onscroll = () => {
+  let currentValue = document.scrollingElement.scrollTop
+  let offset = (currentValue / totalValue) * 100 - 100 + '%'
+  progressBar.style.left = offset
+  console.log(offset)
+}
