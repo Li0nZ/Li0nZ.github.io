@@ -15,12 +15,12 @@
     <script src="index.js"></script>
 </head>
 
-<body onload="initTheme()" style="padding-top: 57px;">
+<body onload="initTheme()" style="padding-top: 30px;">
   <header>
-    <div class="navbar fixed-top container" style="text-align:center;"> 
-        <a href="index.html" style="color:#8e8eff;"><b>About</b></a>
+    <div class="navbar fixed-top" style="text-align:center; opacity:1;"> 
+        <a href="index.html" style="color:var(--colors-select);"><b>About</b></a>
         <a href="math.html">Math</a>
-        <a class="right nohover">
+        <!--<a class="right nohover">
           <button class="theme-switcher js-theme-switcher" aria-pressed="false" onclick="switchTheme()">
             <span class="visually-hidden">Changer le mode de couleurs</span>
             <span class="theme-icon">
@@ -33,13 +33,14 @@
               </svg>
             </span>
           </button>
-        </a>
+        </a>-->
     </div>
-
   </header>
   
+  <div class="container" style="margin-top: 1rem !important;padding: 10px 20px 10px 20px;">
+
   <h1> Thiago Landim</h1>
-  <div class="container"style="padding-right:5%;">
+
   <div style="width: 40%; float:right;">
     <div class="img" style="box-shadow: 0px 0px 5px black;">
       <img class="container__image" src="images/eu.png" alt="Me"  width="320px">
@@ -56,6 +57,34 @@
       <p style="font-size: 12pt;">
         I'm interested in both pure Mathematics (especially in applications of motives to Representation Theory) and in Computer Science (especially applications of Data Science to the Envinronment).
       </p>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div>
+      <a href="mailto:thiago.landim.sl@gmail.com">
+      <img src="images/Email_withcircle_without_bg.png" alt="email_logo" width="50px" style="margin-right:10px; margin-top:20px;">
+      </a>
+    </div>
+
+    <div>
+      <a href="https://arxiv.org/search/math?searchtype=author&query=Landim,+T">
+      <img src="images/arxiv_logo-without_bg.png" alt="arxiv_logo" width="50px" style="margin-right:10px; margin-top:20px;">
+      </a>
+    </div>
+    
+    <div>
+      <a href="https://github.com/Li0nZ">
+      <img src="images/github_logo.png" alt="github_logo" width="50px" style="margin-right:10px; margin-top:20px;">
+    </a>
+    </div>
+
+    <div>
+      <a href="https://www.linkedin.com/in/thiago-landim/">
+      <img src="images/Linkedin_circle_black.png" alt="linkedin_logo" width="50px" style="margin-right:10px; margin-top:20px;">
+    </a>
+    </div>
   </div>
   </div>
 </body>

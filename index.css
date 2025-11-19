@@ -82,22 +82,27 @@
 
 body {
   /* color-scheme: light dark; */
-  --colors-white: #F9EAD6;
-  --colors-black: #333333;
-  --colors-primary: var(--colors-black);
-  --colors-secondary: var(--colors-white);
+  --colors-bg: #F9EAD6;
+  --colors-text: #333333;
+  --colors-select: #6666ff;
+  --colors-primary: var(--colors-bg);
+  --colors-secondary: var(--colors-text);
   --font-size-base: 1.2rem;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --border-radius-full: 9999px;
-
-  background: var(--colors-white);
-  color: var(--colors-black);
+  background: var(--colors-bg);
+  color: var(--colors-text);
 }
 
 body.dark-mode {
-  background: var(--colors-black);
-  color: var(--colors-white);
+  --colors-bg:#404040;
+  --colors-text:#ffffff;
+  --colors-select: #afafee;
+  --colors-primary: var(--colors-text);
+  --colors-secondary: var(--colors-bg);
+  background: var(--colors-bg);
+  color: var(--colors-text);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -160,10 +165,13 @@ main {
 }
 
 
-    /* Style the top navigation bar */
+/* Style the top navigation bar */
 .navbar {
   overflow: hidden; /* Hide overflow */
-  background-color: light dark; /* Dark background color */
+  background-color: var(--colors-bg); /* Dark background color */
+  padding: 10px 20px 10px 20px;
+  border-bottom: 1px solid gray;
+  box-shadow: 0px 0px 2px gray;
 }
 
 /* This class will be added or removed by JavaScript */
@@ -173,7 +181,6 @@ main {
 }
 
 .main-topic {
-    border: 2px solid green;
     width: 1541px;
     margin: 0 auto;
     clear: both;
@@ -195,9 +202,8 @@ main {
 .navbar a {
   
   display: inline-block;/* Change the display to block, for responsive reasons (see below) */
-  color: color; /* White text color */
   text-align: center; /* Center the text */
-  padding: 14px 20px; /* Add some padding */
+  padding: 1px 10px; /* Add some padding */
   text-decoration: none; /* Remove underline */
 }
 
@@ -208,25 +214,22 @@ main {
 
 .navbar a:not(.nohover):hover {  
   /*background-color: #eee; /* Grey background color */
-  color: #8e8eff;
+  color: var(--colors-select); /* Select text color */
 }
 
 
 .container {
-  padding: 20px 40px 40px;
   max-width: 1000px;
   &__image {
     display: inline-block;
     vertical-align: top;
     width: 46%;
-    padding: 20px 40px 40px;
   }
   &__text {
     display: inline-block;
     width: 46%;
     max-width: 300px;
     margin: 20px;
-    padding: 20px 40px 40px;
   }
 }
 
@@ -263,4 +266,11 @@ img {
 
 img#shadow {
   box-shadow: 0px 0px 10px black;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
 }
